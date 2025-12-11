@@ -1,0 +1,49 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 22 # Use a supported Node.js version
+    commands:
+      # Install the SQL Server command-line tools if needed for any specific build steps
+      - echo "Installing SQL Server tools (optional)"
+      # Example for Ubuntu image:
+      # - curl packages.microsoft.com | sudo apt-key add -
+      # - curl packages.microsoft.com(lsb_release -rs)/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
+      # - sudo apt-get update
+      # - sudo apt-get install -y mssql-tools unixodbc-dev
+
+  pre_build:
+    commands:
+      - echo "Starting pre-build phase..."
+      # Navigate to the client directory and install dependencies
+      - cd client
+      - npm install
+      # Return to the root directory
+      - cd ..
+      # Navigate to the server directory and install dependencies
+      - cd server
+      - npm install
+      # Return to the root directory
+      - cd ..
+
+  build:
+    commands:
+      - echo "Starting build phase..."
+      # Build the React client application
+      - cd client
+      - npm run build
+      # Return to the root directory
+      - cd ..
+      # Note: Node.js server-side code typically does not require a separate 'build' command unless using TypeScript or a bundler like esbuild.
+
+  post_build:
+    commands:
+      - echo "Starting post-build phase..."
+      # Commands for deployment or packaging artifacts (e.g., copying files to S3, deploying to an environment) would go here
+
+artifacts:
+  files:
+    - '**/*'
+  # You might want to adjust the base-directory if you're deploying a specific folder (e.g., the server directory or a combined artifact directory)
+  # base-directory: server
