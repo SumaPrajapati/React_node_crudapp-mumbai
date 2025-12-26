@@ -1,2 +1,2 @@
 #!/bin/bash
-rm -rf /var/www/React_node_crudapp-mumbai/*
+rm -rf /var/www/React-Crud_nodewithSql_app-mumbai/*
