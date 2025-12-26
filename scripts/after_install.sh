@@ -1,7 +1,7 @@
 #!/bin/bash
 set -xe
 
-APP_DIR="/var/www/React-Crud_nodewithSql_app-mumbai
+APP_DIR="/var/www/React-Crud_nodewithSql_app-mumbai"
 
 cd "$APP_DIR"
 
