@@ -1,7 +1,7 @@
 #!/bin/bash
 set -xe
 
-APP_DIR="/var/www/React_node_crudapp-mumbai"
+APP_DIR="/var/www/React-Crud_nodewithSql_app-mumbai"
 NODE_BIN="/home/ubuntu/.nvm/versions/node/v22.13.1/bin/node"
 
 # Load NVM for root
