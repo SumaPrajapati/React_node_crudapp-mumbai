@@ -1,4 +1,5 @@
 #!/bin/bash
-# Stop the Node.js server using pm2 (or forever, etc.)
-pm2 stop all || true
-pm2 delete all || true
+set -e
+
+pm2 delete react-node-app || true
+echo "application_stop.sh completed successfully."
