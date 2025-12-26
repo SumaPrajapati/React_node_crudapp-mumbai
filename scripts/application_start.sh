@@ -1,15 +1,13 @@
 #!/bin/bash
-set -xe
+set -e
 
 APP_DIR="/var/www/React-Crud_nodewithSql_app-mumbai"
-NODE_BIN="/home/ubuntu/.nvm/versions/node/v22.13.1/bin/node"
-
-# Load NVM for root
-export NVM_DIR="/home/ubuntu/.nvm"
-source "$NVM_DIR/nvm.sh"
-nvm use 22
 
 cd "$APP_DIR/server"
 
-# index.js listens on port 8080
-nohup "$NODE_BIN" index.js > /var/log/your-node-app.log 2>&1 &
+# Start/restart node app
+pm2 delete react-node-app || true
+pm2 start index.js --name react-node-app
+pm2 save
+
+echo "application_start.sh completed successfully."
