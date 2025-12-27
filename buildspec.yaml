@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 22 # Use a supported Node.js version
+      nodejs: 22.13.1 # Use a supported Node.js version
     commands:
       # Install the SQL Server command-line tools if needed for any specific build steps
       - echo "Installing SQL Server tools (optional)"
