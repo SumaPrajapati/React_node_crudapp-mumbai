@@ -35,7 +35,7 @@ function HomeComponent() {
     return (
         <div className="container text-center">
             <div className="py-4">
-                <h1>Home Mumbai Users</h1>
+                <h1>Home Mumbai Region Users</h1>
                 <div>
                     <table className="table border shadow p-6 table-striped">
                         <thead className="thead-dark">
