@@ -35,7 +35,11 @@ function HomeComponent() {
     return (
         <div className="container text-center">
             <div className="py-4">
+<<<<<<< HEAD
                 <h1>Home Mumbai region-5 Users</h1>
+=======
+                <h1>Home Mumbai Users Region</h1>
+>>>>>>> 6d95db1caa930e62cd7bf75eab364c288f7bedcc
                 <div>
                     <table className="table border shadow p-6 table-striped">
                         <thead className="thead-dark">
@@ -43,7 +47,7 @@ function HomeComponent() {
                                 <th scope="col">#</th>
                                 <th scope="col">First Name</th>
                                 <th scope="col">Last Name</th>
-                                <th scope="col">user EMail</th>
+                                <th scope="col">EMail</th>
                                 <th scope="col">Actions</th>
                             </tr>
                         </thead>

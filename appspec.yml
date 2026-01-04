@@ -4,7 +4,7 @@ file_exists_behavior: OVERWRITE
 
 files:
   - source: / # Copies everything from the root of my Github repo
-    destination: /var/www/React_node_crudapp-mumbai # The deployment path on EC2 instance
+    destination: /var/www/React-Crud_nodewithSql_app-mumbai # The deployment path on EC2 instance
 hooks:
   ApplicationStop:
     - location: scripts/application_stop.sh
